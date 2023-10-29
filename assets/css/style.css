@@ -72,7 +72,7 @@ h6 {
 }
 
 #header h1 {
-  font-size: 48px;
+  font-size: 150px;
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -88,7 +88,7 @@ h6 {
 }
 
 #header h2 {
-  font-size: 24px;
+  font-size: 40px;
   margin-top: 20px;
   color: rgba(255, 255, 255, 0.8);
 }
@@ -1183,6 +1183,8 @@ section .container {
 .credits a {
   color: #18d26e;
   transition: 0.3s;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .credits a:hover {
