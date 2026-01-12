@@ -1,4 +1,4 @@
-# Minimalist Portfolio Website
+# Minimalist Portfolio (Sk Zehad)
 
 A clean, modern portfolio website built with Next.js and Tailwind CSS, featuring smooth animations and dark/light theme support.
 
@@ -21,7 +21,7 @@ A clean, modern portfolio website built with Next.js and Tailwind CSS, featuring
 
 \`\`\`bash
 # Clone the repository
-git clone https://github.com/felixmacaspac/v0-minimalist-portfolio.git
+git clone https://github.com/sehabkhanzehad/zehad.me2.git
 
 # Install dependencies
 npm install
@@ -31,6 +31,8 @@ npm run dev
 \`\`\`
 
 Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
+
+> Note: This project uses `next-themes` and defaults to the visitor's system theme (Light/Dark/System).
 
 ## 🎨 Customization
 
@@ -46,4 +48,10 @@ Open source and available under the [MIT License](LICENSE).
 
 ---
 
-**Built with ❤️ using [v0.dev](https://v0.dev) by Felix Macaspac**
+## 🔧 Recent Refactor
+
+- Consolidated theme provider into `components/ThemeProvider.tsx` and removed the unused `components/theme-provider.tsx` file.
+- Removed an unused `Thoughts` import from `app/page.tsx` (the `components/Thoughts.tsx` file is still present if you want the section later).
+- Updated site metadata and README to reflect the current project owner and conventions.
+
+**Built with ❤️ using Next.js by Sk Zehad**

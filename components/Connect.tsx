@@ -4,7 +4,7 @@ import Link from "next/link"
 import { forwardRef } from "react"
 import {
     Github,
-    Linkedin, Mail, ExternalLink
+    Linkedin, Mail
 } from "lucide-react"
 
 // WhatsApp icon component
