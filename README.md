@@ -2,6 +2,16 @@
 
 A minimalist portfolio website built with Next.js, TypeScript, and Tailwind CSS, featuring responsive design, theme toggle, and smooth animations.
 
+## Tech Stack
+
+- Next.js 16.1.1
+- React 19.2.3
+- TypeScript 5.9.3
+- Tailwind CSS 4.1.18
+- shadcn/ui (Radix UI components)
+- Lucide React icons
+- Next Themes for theme toggle
+
 ## Features
 
 - Responsive layout
