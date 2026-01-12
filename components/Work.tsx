@@ -7,35 +7,49 @@ const Work = forwardRef<HTMLElement>((props, ref) => {
         {
             role: "Software Developer",
             company: "Lancepilot Ltd.",
+            url: "https://lancepilot.com",
+            location: "Dhaka, Bangladesh",
             period: "2024 — Present",
             points: [
-                "Develop scalable SaaS backends using Laravel",
-                "Implement multi-tenant & white-label architectures",
-                "Integrate Stripe billing (subscriptions, trials, payments)",
-                "Build secure, API-first systems with RBAC",
-                "Optimize databases & performance for production workloads"
+                "Build and scale SaaS platforms with Laravel using API-first architecture and multitenancy",
+                "Develop white-label solutions with custom domain mapping and RBAC",
+                "Integrate Stripe billing, OAuth authentication, and payment webhooks",
+                "Implement real-time features with WebSockets, Pusher, and Laravel Reverb",
+                "Build webhook integrations for third-party services and event-driven systems",
+                "Deploy applications on Laravel Cloud, Forge, and AWS with storage configuration",
+                "Optimize PostgreSQL & MySQL for performance and efficient query execution",
+                "Handle production deployments, bug fixes, and performance optimization",
+                "Collaborate on product launches including Product Hunt campaigns"
             ],
-            tech: ["Laravel", "REST API", "SaaS", "Multitenancy", "Stripe", "PostgreSQL", "Redis"]
+            tech: ["Laravel", "PHP", "REST API", "SaaS", "Multitenancy", "Custom Domains", "Stripe", "WebSockets", "Pusher", "Laravel Reverb", "Webhooks", "PostgreSQL", "MySQL", "Redis", "Laravel Cloud", "Forge", "AWS"]
         },
         {
             role: "Software Developer (Remote)",
-            company: "R&D Global Nest",
+            company: "Research & Development Global Nest",
+            url: "https://www.facebook.com/rndglobalnest",
+            location: "Dhaka, Bangladesh",
             period: "2024",
             points: [
-                "Build and maintain RESTful APIs",
-                "Optimize database design & queries",
-                "Debug and resolve backend system issues"
+                "Developed web applications using Laravel and PHP",
+                "Worked on backend and frontend using Blade, JavaScript, HTML, and CSS",
+                "Designed and optimized MySQL databases",
+                "Fixed bugs, improved stability, and resolved application-level issues",
+                "Maintained and enhanced existing systems for performance and reliability"
             ],
-            tech: ["Laravel", "REST API", "MySQL/PostgreSQL"]
+            tech: ["Laravel", "PHP", "Blade", "JavaScript", "HTML", "CSS", "MySQL"]
         },
         {
             role: "IT Operator",
             company: "M/S Raj Travels",
+            url: "https://msrajtravels.com",
+            location: "Chapainawabganj, Bangladesh",
             period: "2021 — 2023",
             points: [
-                "Managed IT infrastructure & systems",
-                "Provided technical support and issue resolution",
-                "Ensured system stability & data reliability"
+                "Managed IT systems and office infrastructure",
+                "Worked on Hajj pilgrim registration, pre-registration, visa processing, and data management",
+                "Supported technical operations, accounts systems, and reporting",
+                "Provided continuous technical support and troubleshooting",
+                "Earned management recognition for reliability and problem-solving"
             ],
             tech: []
         }
@@ -45,9 +59,9 @@ const Work = forwardRef<HTMLElement>((props, ref) => {
         <section
             id="work"
             ref={ref}
-            className="min-h-screen py-20 sm:py-32 opacity-0"
+            className="min-h-screen py-8 sm:py-12 opacity-0"
         >
-            <div className="space-y-12 sm:space-y-16">
+            <div className="space-y-8">
                 <h2 className="text-3xl sm:text-4xl font-light">Experience</h2>
 
                 <div className="relative max-w-4xl">
@@ -71,7 +85,20 @@ const Work = forwardRef<HTMLElement>((props, ref) => {
                                             <h3 className="text-xl sm:text-2xl font-medium tracking-tight">
                                                 {job.role}
                                             </h3>
-                                            <div className="text-muted-foreground/80 text-sm mt-1">{job.company}</div>
+                                            <div className="text-muted-foreground/80 text-sm mt-1">
+                                                <a
+                                                    href={job.url}
+                                                    target="_blank"
+                                                    rel="noopener noreferrer"
+                                                    className="hover:text-foreground transition-colors duration-200 inline-flex items-center gap-1"
+                                                >
+                                                    {job.company}
+                                                    <svg className="w-3 h-3 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                                                    </svg>
+                                                </a>
+                                                {" · "}<span className="text-muted-foreground/60">{job.location}</span>
+                                            </div>
                                         </div>
                                         <div className="text-xs text-muted-foreground/60 font-mono tracking-wider uppercase">
                                             {job.period}

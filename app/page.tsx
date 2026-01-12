@@ -4,6 +4,8 @@ import { useEffect, useRef, useState } from "react"
 import Nav from "../components/Nav"
 import Intro from "../components/Intro"
 import Work from "../components/Work"
+import Skills from "../components/Skills"
+import Projects from "../components/Projects"
 import Thoughts from "../components/Thoughts"
 import Connect from "../components/Connect"
 import Footer from "../components/Footer"
@@ -27,7 +29,7 @@ export default function Home() {
           }
         })
       },
-      { threshold: 0.3, rootMargin: "0px 0px -20% 0px" },
+      { threshold: 0.15, rootMargin: "0px 0px -40% 0px" },
     )
 
     sectionsRef.current.forEach((section) => {
@@ -48,8 +50,10 @@ export default function Home() {
       <main className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-16">
         <Intro ref={(el) => { sectionsRef.current[0] = el }} />
         <Work ref={(el) => { sectionsRef.current[1] = el }} />
-        <Thoughts ref={(el) => { sectionsRef.current[2] = el }} />
-        <Connect ref={(el) => { sectionsRef.current[3] = el }} />
+        <Skills ref={(el) => { sectionsRef.current[2] = el }} />
+        <Projects ref={(el) => { sectionsRef.current[3] = el }} />
+        {/* <Thoughts ref={(el) => { sectionsRef.current[4] = el }} /> */}
+        <Connect ref={(el) => { sectionsRef.current[4] = el }} />
         <Footer isDark={isDark} toggleTheme={toggleTheme} />
       </main>
 
