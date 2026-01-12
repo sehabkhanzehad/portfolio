@@ -11,13 +11,8 @@ import Connect from "../components/Connect"
 import Footer from "../components/Footer"
 
 export default function Home() {
-  const [isDark, setIsDark] = useState(true)
   const [activeSection, setActiveSection] = useState("")
   const sectionsRef = useRef<(HTMLElement | null)[]>([])
-
-  useEffect(() => {
-    document.documentElement.classList.toggle("dark", isDark)
-  }, [isDark])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -39,10 +34,6 @@ export default function Home() {
     return () => observer.disconnect()
   }, [])
 
-  const toggleTheme = () => {
-    setIsDark(!isDark)
-  }
-
   return (
     <div className="min-h-screen bg-background text-foreground relative" suppressHydrationWarning>
       <Nav activeSection={activeSection} />
@@ -54,7 +45,7 @@ export default function Home() {
         <Projects ref={(el) => { sectionsRef.current[3] = el }} />
         {/* <Thoughts ref={(el) => { sectionsRef.current[4] = el }} /> */}
         <Connect ref={(el) => { sectionsRef.current[4] = el }} />
-        <Footer isDark={isDark} toggleTheme={toggleTheme} />
+        <Footer />
       </main>
 
       <div className="fixed bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-background via-background/80 to-transparent pointer-events-none"></div>
