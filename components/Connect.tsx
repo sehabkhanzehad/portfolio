@@ -53,12 +53,10 @@ const Connect = forwardRef<HTMLElement>((props, ref) => {
                     </div>
                 </div>
 
-                {/* Simplified Email Section */}
+                {/* Email Section */}
                 <div className="opacity-0 translate-y-6 animate-[fadeInUp_0.5s_ease-out_0.3s_forwards]">
                     <a
                         href="mailto:sehabkhanzehad@gmail.com"
-                        target="_blank"
-                        rel="noopener noreferrer"
                         className="flex items-center gap-4 text-foreground hover:text-foreground/80 transition-colors"
                     >
                         <Mail className="w-6 h-6 text-muted-foreground/70" />
