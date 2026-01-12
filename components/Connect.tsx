@@ -2,60 +2,129 @@
 
 import Link from "next/link"
 import { forwardRef } from "react"
+import {
+    Github,
+    Linkedin, Mail, MessageCircle, Instagram, Twitter, ExternalLink
+} from "lucide-react"
 
 const Connect = forwardRef<HTMLElement>((props, ref) => {
+    const socialLinks = [
+        {
+            name: "GitHub",
+            url: "https://github.com/sehabkhanzehad",
+            Icon: Github
+        },
+        {
+            name: "LinkedIn",
+            url: "https://linkedin.com/in/sehabkhanzehad",
+            Icon: Linkedin
+        },
+        {
+            name: "Twitter",
+            url: "https://twitter.com/sehabkhanzehad",
+            Icon: Twitter
+        },
+        {
+            name: "Instagram",
+            url: "https://instagram.com/sehabkhanzehad",
+            Icon: Instagram
+        },
+    ]
+
     return (
-        <section id="connect" ref={ref} className="py-8 sm:py-12 opacity-0">
-            <div className="grid lg:grid-cols-2 gap-12 sm:gap-16">
-                <div className="space-y-6 sm:space-y-8 opacity-0 translate-y-6 animate-[fadeInUp_0.5s_ease-out_0.1s_forwards]">
-                    <h2 className="text-3xl sm:text-4xl font-light">Let's Connect</h2>
-
-                    <div className="space-y-6">
-                        <p className="text-lg sm:text-xl text-muted-foreground leading-relaxed">
-                            Always interested in new opportunities, collaborations, and conversations about technology and design.
-                        </p>
-
-                        <div className="space-y-4">
-                            <Link
-                                href="mailto:test@example.com"
-                                className="group flex items-center gap-3 text-foreground hover:text-muted-foreground transition-colors duration-300"
-                            >
-                                <span className="text-base sm:text-lg">test@example.com</span>
-                                <svg
-                                    className="w-5 h-5 transform group-hover:translate-x-1 transition-transform duration-300"
-                                    fill="none"
-                                    stroke="currentColor"
-                                    viewBox="0 0 24 24"
-                                >
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                                </svg>
-                            </Link>
+        <section id="connect" ref={ref} className="py-12 sm:py-16 opacity-0">
+            <div className="space-y-8 sm:space-y-10">
+                {/* Header */}
+                <div className="opacity-0 translate-y-6 animate-[fadeInUp_0.5s_ease-out_0.1s_forwards]">
+                    <div className="space-y-3">
+                        <div className="flex items-center gap-3">
+                            <div className="h-px w-8 bg-gradient-to-r from-foreground/40 to-transparent" />
+                            <span className="text-[10px] font-mono tracking-[0.2em] text-muted-foreground/60 uppercase">Connect</span>
                         </div>
+
+                        <h2 className="text-3xl sm:text-4xl font-light tracking-tight">
+                            Let's Create{" "}
+                            <span className="bg-gradient-to-r from-foreground via-foreground/80 to-foreground/60 bg-clip-text text-transparent">
+                                Together
+                            </span>
+                        </h2>
                     </div>
                 </div>
 
-                <div className="space-y-6 sm:space-y-8 opacity-0 translate-y-6 animate-[fadeInUp_0.5s_ease-out_0.3s_forwards]">
-                    <div className="text-sm text-muted-foreground font-mono">ELSEWHERE</div>
+                {/* Contact Cards */}
+                <div className="grid sm:grid-cols-2 gap-3 opacity-0 translate-y-6 animate-[fadeInUp_0.5s_ease-out_0.3s_forwards]">
+                    {/* Email Card */}
+                    <Link
+                        href="mailto:sehabkhanzehad@gmail.com"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group relative overflow-hidden rounded-2xl border border-border/40 bg-card/30 hover:border-foreground/30 hover:bg-card/50 transition-all duration-300 p-5"
+                    >
+                        <div className="absolute inset-0 bg-gradient-to-br from-foreground/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
 
-                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                        {[
-                            { name: "GitHub", handle: "@felixmacaspac", url: "#" },
-                            { name: "v0.dev", handle: "@felixmacaspac", url: "#" },
-                            { name: "HubSpot Community", handle: "@felixmacaspac", url: "#" },
-                            { name: "LinkedIn", handle: "felixmacaspac", url: "#" },
-                        ].map((social, index) => (
+                        <div className="relative flex items-start gap-4">
+                            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-muted/50 flex items-center justify-center group-hover:bg-muted transition-colors">
+                                <Mail className="w-5 h-5 opacity-60 group-hover:opacity-100 transition-opacity" />
+                            </div>
+
+                            <div className="flex-1 min-w-0 space-y-1">
+                                <div className="text-xs text-muted-foreground/60 font-mono uppercase tracking-wider">Email</div>
+                                <div className="text-sm sm:text-base font-medium text-foreground/90 group-hover:text-foreground truncate transition-colors">
+                                    sehabkhanzehad@gmail.com
+                                </div>
+                            </div>
+
+                            <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-60 transition-opacity flex-shrink-0 mt-1" />
+                        </div>
+                    </Link>
+
+                    {/* WhatsApp Card */}
+                    <Link
+                        href="https://wa.me/8801744646344"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="group relative overflow-hidden rounded-2xl border border-border/40 bg-card/30 hover:border-foreground/30 hover:bg-card/50 transition-all duration-300 p-5"
+                    >
+                        <div className="absolute inset-0 bg-gradient-to-br from-foreground/[0.02] to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+
+                        <div className="relative flex items-start gap-4">
+                            <div className="flex-shrink-0 w-10 h-10 rounded-full bg-muted/50 flex items-center justify-center group-hover:bg-muted transition-colors">
+                                <MessageCircle className="w-5 h-5 opacity-60 group-hover:opacity-100 transition-opacity" />
+                            </div>
+
+                            <div className="flex-1 min-w-0 space-y-1">
+                                <div className="text-xs text-muted-foreground/60 font-mono uppercase tracking-wider">WhatsApp</div>
+                                <div className="text-sm sm:text-base font-medium text-foreground/90 group-hover:text-foreground transition-colors">
+                                    +880 1744 646344
+                                </div>
+                            </div>
+
+                            <ExternalLink className="w-4 h-4 opacity-0 group-hover:opacity-60 transition-opacity flex-shrink-0 mt-1" />
+                        </div>
+                    </Link>
+                </div>
+
+                {/* Social Links */}
+                <div className="space-y-5 opacity-0 translate-y-6 animate-[fadeInUp_0.5s_ease-out_0.5s_forwards]">
+                    <div className="flex items-center gap-3">
+                        <div className="h-px flex-1 bg-gradient-to-r from-border/60 to-transparent" />
+                        <span className="text-[10px] font-mono tracking-[0.2em] text-muted-foreground/60 uppercase">Elsewhere</span>
+                        <div className="h-px flex-1 bg-gradient-to-l from-border/60 to-transparent" />
+                    </div>
+
+                    <div className="flex flex-wrap gap-3 justify-center sm:justify-start">
+                        {socialLinks.map((social, index) => (
                             <Link
                                 key={social.name}
                                 href={social.url}
-                                className="group p-4 border border-border rounded-lg hover:border-muted-foreground/50 hover:scale-105 transition-all duration-300 hover:shadow-sm opacity-0 animate-[fadeIn_0.4s_ease-out_forwards]"
-                                style={{ animationDelay: `${0.5 + index * 0.08}s` }}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                aria-label={social.name}
+                                title={social.name}
+                                className="group relative w-11 h-11 rounded-full border border-border/40 bg-card/30 hover:border-foreground/30 hover:bg-card/50 flex items-center justify-center transition-all duration-300 hover:scale-110 opacity-0 animate-[fadeIn_0.4s_ease-out_forwards]"
+                                style={{ animationDelay: `${0.7 + index * 0.05}s` }}
                             >
-                                <div className="space-y-2">
-                                    <div className="text-foreground group-hover:text-muted-foreground transition-colors duration-300">
-                                        {social.name}
-                                    </div>
-                                    <div className="text-sm text-muted-foreground">{social.handle}</div>
-                                </div>
+                                <social.Icon className="w-[18px] h-[18px] opacity-60 group-hover:opacity-100 transition-opacity" />
                             </Link>
                         ))}
                     </div>

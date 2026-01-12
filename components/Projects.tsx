@@ -190,7 +190,7 @@ const Projects = forwardRef<HTMLElement>((props, ref) => {
                             style={{ animationDelay: `${index * 0.1}s` }}
                         >
                             <div className="group relative">
-                                <div className="relative p-8 sm:p-10 border border-border/10 hover:border-border/20 transition-all duration-300">
+                                <div className="relative p-8 sm:p-10 rounded-2xl bg-muted/5 hover:bg-muted/10 transition-all duration-300 shadow-sm hover:shadow-md">
                                     <div className="space-y-4">
                                         {/* Header */}
                                         <div className="space-y-2">
