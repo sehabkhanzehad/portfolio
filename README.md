@@ -1,4 +1,4 @@
-# Zehad.me2
+# Portfolio
 
 A minimalist portfolio website built with Next.js, TypeScript, and Tailwind CSS, featuring responsive design, theme toggle, and smooth animations.
 
@@ -22,8 +22,8 @@ A minimalist portfolio website built with Next.js, TypeScript, and Tailwind CSS,
 ## Setup
 
 ```bash
-git clone https://github.com/sehabkhanzehad/zehad.me2.git
-cd zehad.me2
+git clone https://github.com/sehabkhanzehad/portfolio.git
+cd portfolio
 pnpm install  # Recommended
 # or npm install
 ```
