@@ -143,17 +143,16 @@ MIT License — see `LICENSE`.
 
 **Built with ❤️ using Next.js by Sk Zehad**
 
-A clean, modern portfolio website built with Next.js and Tailwind CSS, featuring smooth animations and dark/light theme support.
+A minimalist portfolio website built with Next.js and Tailwind CSS, featuring responsive design, theme toggle, and smooth animations.
 
-## ✨ Features
+## Features
 
-- **Minimalist Design** - Clean typography with Geist font and strategic use of whitespace
-- **Responsive Layout** - Mobile-first design that works on all devices
-- **Theme Toggle** - Seamless dark/light mode switching
-- **Smooth Animations** - Subtle scroll-triggered animations and hover effects
-- **Modern Stack** - Built with Next.js 15, TypeScript, and Tailwind CSS
+- Clean, responsive layout
+- Dark/light mode
+- Smooth animations
+- Built with Next.js, TypeScript, and Tailwind CSS
 
-## 🚀 Built With
+## Getting Started
 
 - [Next.js](https://nextjs.org/) - React framework
 - [TypeScript](https://www.typescriptlang.org/) - Type safety
@@ -168,27 +167,23 @@ git clone https://github.com/sehabkhanzehad/zehad.me2.git
 
 # Install dependencies
 npm install
-
-# Run development server
 npm run dev
-\`\`\`
+```
 
-Open [http://localhost:3000](http://localhost:3000) to view the portfolio.
+Open [http://localhost:3000](http://localhost:3000) to view it.
 
 > Note: This project uses `next-themes` and defaults to the visitor's system theme (Light/Dark/System).
 
 ## 🎨 Customization
 
-The portfolio is designed to be easily customizable:
+- Update content in `app/page.tsx`
+- Modify styles in `app/globals.css`
 
-- Update personal information in `app/page.tsx`
-- Modify colors and styling in `app/globals.css`
-- Add or remove sections as needed
+## License
 
-## 📄 License
+MIT License
 
-Open source and available under the [MIT License](LICENSE).
+Copyright (c) 2026 sehabkhanzehad
 
----
-
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
