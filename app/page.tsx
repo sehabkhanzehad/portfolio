@@ -44,7 +44,7 @@ export default function Home() {
   }
 
   return (
-    <div className="min-h-screen bg-background text-foreground relative">
+    <div className="min-h-screen bg-background text-foreground relative" suppressHydrationWarning>
       <Nav activeSection={activeSection} />
 
       <main className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-16">
