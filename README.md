@@ -1,30 +1,44 @@
 # Zehad.me2
 
-A minimalist portfolio website built with Next.js and Tailwind CSS, featuring responsive design, theme toggle, and smooth animations.
+A minimalist portfolio website built with Next.js, TypeScript, and Tailwind CSS, featuring responsive design, theme toggle, and smooth animations.
 
 ## Features
 
-- Clean, responsive layout
-- Dark/light mode
-- Smooth animations
-- Built with Next.js, TypeScript, and Tailwind CSS
+- Responsive layout
+- Dark/light mode toggle
+- Smooth scroll animations
+- Built with Next.js 16, React 19, and shadcn/ui components
 
-## Getting Started
+## Setup
 
 ```bash
 git clone https://github.com/sehabkhanzehad/zehad.me2.git
 cd zehad.me2
-npm install
-npm run dev
+pnpm install  # Recommended
+# or npm install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) to view it.
+## Run
+
+```bash
+pnpm dev  # or npm run dev
+```
+
+Open [http://localhost:3000](http://localhost:3000).
+
+## Lint
+
+```bash
+pnpm lint  # or npm run lint
+pnpm lint:fix  # Auto-fix issues
+```
 
 ## Customization
 
-- Update content in `app/page.tsx`
-- Modify styles in `app/globals.css`
+- Update content in `components/` (Intro, Work, Skills, Projects, etc.)
+- Modify styles in `app/globals.css` or `styles/globals.css`
+- Adjust theme in `components/ThemeProvider.tsx`
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+MIT - see [LICENSE](LICENSE).
