@@ -72,8 +72,8 @@ const Work = forwardRef<HTMLElement>((props, ref) => {
                         {jobs.map((job, index) => (
                             <div
                                 key={index}
-                                className="relative sm:ml-12 opacity-0 translate-y-8 animate-[fadeInUp_0.6s_ease-out_forwards]"
-                                style={{ animationDelay: `${index * 0.2}s` }}
+                                className="relative sm:ml-12 opacity-0 translate-y-6 animate-[fadeInUp_0.5s_ease-out_forwards]"
+                                style={{ animationDelay: `${index * 0.15}s` }}
                             >
                                 {/* Timeline dot - vertically centered with job title */}
                                 <div className="absolute -left-[3.25rem] top-[2.75rem] w-2.5 h-2.5 bg-foreground rounded-full hidden sm:block ring-4 ring-background"></div>
@@ -115,10 +115,11 @@ const Work = forwardRef<HTMLElement>((props, ref) => {
 
                                     {job.tech.length > 0 && (
                                         <div className="flex flex-wrap gap-2 mt-4">
-                                            {job.tech.map((tech) => (
+                                            {job.tech.map((tech, techIndex) => (
                                                 <span
                                                     key={tech}
-                                                    className="px-3 py-1.5 text-xs text-foreground/80 rounded-full bg-muted/30 border border-border/40 hover:bg-muted/50 hover:text-foreground transition-all duration-300"
+                                                    className="px-3 py-1.5 text-xs text-foreground/80 rounded-full bg-muted/30 border border-border/40 hover:bg-muted/50 hover:text-foreground hover:scale-105 transition-all duration-300 opacity-0 animate-[fadeIn_0.4s_ease-out_forwards]"
+                                                    style={{ animationDelay: `${index * 0.15 + techIndex * 0.03}s` }}
                                                 >
                                                     {tech}
                                                 </span>

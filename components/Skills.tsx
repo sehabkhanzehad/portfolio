@@ -83,14 +83,14 @@ const Skills = forwardRef<HTMLElement>((props, ref) => {
                     {skillCategories.map((category, index) => (
                         <div
                             key={category.title}
-                            className="opacity-0 translate-y-6 animate-[fadeInUp_0.7s_ease-out_forwards]"
-                            style={{ animationDelay: `${index * 0.15}s` }}
+                            className="opacity-0 translate-y-6 animate-[fadeInUp_0.5s_ease-out_forwards]"
+                            style={{ animationDelay: `${index * 0.1}s` }}
                         >
                             <div className="group relative">
                                 {/* Subtle background gradient */}
                                 <div className="absolute inset-0 bg-gradient-to-br from-muted/[0.02] to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
-                                <div className="relative p-6 rounded-2xl border border-border/20 hover:border-border/40 transition-all duration-500">
+                                <div className="relative p-6 rounded-2xl border border-border/20 hover:border-border/40 transition-all duration-300">
                                     <div className="space-y-4">
                                         <div className="flex items-center gap-3">
                                             <div className="w-1.5 h-1.5 bg-foreground/40 rounded-full"></div>
@@ -103,11 +103,11 @@ const Skills = forwardRef<HTMLElement>((props, ref) => {
                                             {category.skills.map((skill, skillIndex) => (
                                                 <span
                                                     key={skill}
-                                                    className="px-3 py-1.5 text-xs font-medium text-muted-foreground/90 bg-gradient-to-r from-background to-muted/20 backdrop-blur-sm rounded-full border border-border/30 hover:bg-muted/30 hover:text-foreground hover:border-border/50 transition-all duration-400 cursor-default shadow-sm"
+                                                    className="px-3 py-1.5 text-xs font-medium text-muted-foreground/90 bg-gradient-to-r from-background to-muted/20 backdrop-blur-sm rounded-full border border-border/30 hover:bg-muted/30 hover:text-foreground hover:border-border/50 hover:scale-105 transition-all duration-300 cursor-default shadow-sm"
                                                     style={{
-                                                        animationDelay: `${index * 0.15 + skillIndex * 0.05}s`,
+                                                        animationDelay: `${index * 0.1 + skillIndex * 0.03}s`,
                                                         opacity: 0,
-                                                        animation: 'fadeInUp 0.6s ease-out forwards'
+                                                        animation: 'fadeInUp 0.4s ease-out forwards'
                                                     }}
                                                 >
                                                     {skill}
@@ -123,8 +123,8 @@ const Skills = forwardRef<HTMLElement>((props, ref) => {
 
                 {/* Professional Summary */}
                 <div
-                    className="opacity-0 translate-y-4 animate-[fadeInUp_0.7s_ease-out_forwards]"
-                    style={{ animationDelay: '0.8s' }}
+                    className="opacity-0 translate-y-4 animate-[fadeInUp_0.5s_ease-out_forwards]"
+                    style={{ animationDelay: '0.6s' }}
                 >
                     <div className="relative overflow-hidden p-8 rounded-2xl border border-border/20 bg-gradient-to-br from-muted/[0.05] via-muted/[0.02] to-transparent">
                         <div className="absolute inset-0 bg-gradient-to-br from-foreground/[0.01] to-transparent"></div>
@@ -142,7 +142,7 @@ const Skills = forwardRef<HTMLElement>((props, ref) => {
                     </div>
                 </div>
             </div>
-        </section>
+        </section >
     )
 })
 

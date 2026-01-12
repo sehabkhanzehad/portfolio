@@ -7,7 +7,7 @@ const Connect = forwardRef<HTMLElement>((props, ref) => {
     return (
         <section id="connect" ref={ref} className="py-8 sm:py-12 opacity-0">
             <div className="grid lg:grid-cols-2 gap-12 sm:gap-16">
-                <div className="space-y-6 sm:space-y-8">
+                <div className="space-y-6 sm:space-y-8 opacity-0 translate-y-6 animate-[fadeInUp_0.5s_ease-out_0.1s_forwards]">
                     <h2 className="text-3xl sm:text-4xl font-light">Let's Connect</h2>
 
                     <div className="space-y-6">
@@ -34,7 +34,7 @@ const Connect = forwardRef<HTMLElement>((props, ref) => {
                     </div>
                 </div>
 
-                <div className="space-y-6 sm:space-y-8">
+                <div className="space-y-6 sm:space-y-8 opacity-0 translate-y-6 animate-[fadeInUp_0.5s_ease-out_0.3s_forwards]">
                     <div className="text-sm text-muted-foreground font-mono">ELSEWHERE</div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
@@ -43,11 +43,12 @@ const Connect = forwardRef<HTMLElement>((props, ref) => {
                             { name: "v0.dev", handle: "@felixmacaspac", url: "#" },
                             { name: "HubSpot Community", handle: "@felixmacaspac", url: "#" },
                             { name: "LinkedIn", handle: "felixmacaspac", url: "#" },
-                        ].map((social) => (
+                        ].map((social, index) => (
                             <Link
                                 key={social.name}
                                 href={social.url}
-                                className="group p-4 border border-border rounded-lg hover:border-muted-foreground/50 transition-all duration-300 hover:shadow-sm"
+                                className="group p-4 border border-border rounded-lg hover:border-muted-foreground/50 hover:scale-105 transition-all duration-300 hover:shadow-sm opacity-0 animate-[fadeIn_0.4s_ease-out_forwards]"
+                                style={{ animationDelay: `${0.5 + index * 0.08}s` }}
                             >
                                 <div className="space-y-2">
                                     <div className="text-foreground group-hover:text-muted-foreground transition-colors duration-300">
