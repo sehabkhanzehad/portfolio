@@ -5,7 +5,10 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev",
-    "lint": "next lint",
+    "lint": "eslint components app lib --ext .ts,.tsx --cache",
+    "lint:fix": "eslint components app lib --ext .ts,.tsx --fix --cache",
+    "lint:next": "next lint",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
     "start": "next start"
   },
   "dependencies": {

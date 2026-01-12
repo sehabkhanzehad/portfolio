@@ -54,4 +54,49 @@ Open source and available under the [MIT License](LICENSE).
 - Removed an unused `Thoughts` import from `app/page.tsx` (the `components/Thoughts.tsx` file is still present if you want the section later).
 - Updated site metadata and README to reflect the current project owner and conventions.
 
+## 🧹 Linting & Type Checking
+
+This project includes ESLint + TypeScript checks to keep code consistent and catch common errors early. Use the steps below to run and fix linting issues locally.
+
+Recommended commands (pnpm):
+
+- Install linting dependencies (only needed once):
+
+  pnpm add -D eslint eslint-config-next @typescript-eslint/parser @typescript-eslint/eslint-plugin
+
+- Run ESLint (autofix where possible) — recommended (targets source folders to avoid scanning build artifacts):
+
+  pnpm run lint:fix
+
+- Run ESLint (check only, no fixes):
+
+  pnpm run lint
+
+- Run Next.js built-in lint (optional):
+
+  pnpm run lint:next
+
+- Run TypeScript check (no emit):
+
+  pnpm run typecheck
+
+Notes:
+- `pnpm run lint` and `pnpm run lint:fix` are scoped to `components/`, `app/` and `lib/` to avoid scanning `.next/` build artifacts which can cause rule-not-found errors.
+- If you see `ESLintIgnoreWarning: The " .eslintignore " file is no longer supported`, it is safe to ignore — we also configured ignores in `eslint.config.cjs` to prevent linting build artifacts.
+- If ESLint reports missing rules or plugins, run the install command shown earlier to ensure dev dependencies are installed.
+
+
+
+Common fixes & troubleshooting:
+
+- If ESLint complains that a rule or plugin is missing, install the needed dev dependency (see the install command above).
+- If the linter appears to scan build artifacts (like `.next/`), add `--ignore-pattern "**/.next/**"` or add entries in `.eslintignore`.
+- When ESLint reports "defined but never used", remove the unused import or variable, or prefix unused function args with `_` to silence the rule.
+- If you see strange flat-config errors with ESLint v9, ensure an `eslint.config.cjs` or `.eslintrc.cjs` is present at the project root.
+- To reset the lint cache: delete `.eslintcache` and re-run the lint command.
+
+How I ran lint in this repository:
+
+- I installed dev dependencies with `pnpm` and ran the autofix command above. ESLint flagged an unused import in `components/Connect.tsx` which I removed.
+
 **Built with ❤️ using Next.js by Sk Zehad**

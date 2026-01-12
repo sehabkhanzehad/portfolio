@@ -10,11 +10,12 @@ module.exports = [
         project: "./tsconfig.json",
         tsconfigRootDir: __dirname,
       },
+      globals: { window: true, document: true, navigator: true },
     },
     plugins: {
       "@typescript-eslint": require("@typescript-eslint/eslint-plugin"),
     },
-    // Using a minimal rule set here; shareable Next.js config is omitted for flat config simplicity
+    // Minimal rule set for this project
     rules: {
       "@typescript-eslint/no-unused-vars": ["warn", { "argsIgnorePattern": "^_" }],
       "no-console": ["warn", { "allow": ["warn", "error"] }],
