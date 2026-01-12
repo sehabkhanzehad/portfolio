@@ -3,6 +3,44 @@
 import { forwardRef } from "react"
 
 const Work = forwardRef<HTMLElement>((props, ref) => {
+    const jobs = [
+        {
+            role: "Software Developer",
+            company: "Lancepilot Ltd.",
+            period: "2024 — Present",
+            points: [
+                "Develop scalable SaaS backends using Laravel",
+                "Implement multi-tenant & white-label architectures",
+                "Integrate Stripe billing (subscriptions, trials, payments)",
+                "Build secure, API-first systems with RBAC",
+                "Optimize databases & performance for production workloads"
+            ],
+            tech: ["Laravel", "REST API", "SaaS", "Multitenancy", "Stripe", "PostgreSQL", "Redis"]
+        },
+        {
+            role: "Software Developer (Remote)",
+            company: "R&D Global Nest",
+            period: "2024",
+            points: [
+                "Build and maintain RESTful APIs",
+                "Optimize database design & queries",
+                "Debug and resolve backend system issues"
+            ],
+            tech: ["Laravel", "REST API", "MySQL/PostgreSQL"]
+        },
+        {
+            role: "IT Operator",
+            company: "M/S Raj Travels",
+            period: "2021 — 2023",
+            points: [
+                "Managed IT infrastructure & systems",
+                "Provided technical support and issue resolution",
+                "Ensured system stability & data reliability"
+            ],
+            tech: []
+        }
+    ]
+
     return (
         <section
             id="work"
@@ -10,72 +48,60 @@ const Work = forwardRef<HTMLElement>((props, ref) => {
             className="min-h-screen py-20 sm:py-32 opacity-0"
         >
             <div className="space-y-12 sm:space-y-16">
-                <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
-                    <h2 className="text-3xl sm:text-4xl font-light">Selected Work</h2>
-                    <div className="text-sm text-muted-foreground font-mono">2019 — 2025</div>
-                </div>
+                <h2 className="text-3xl sm:text-4xl font-light">Experience</h2>
 
-                <div className="space-y-8 sm:space-y-12">
-                    {[
-                        {
-                            year: "2023",
-                            role: "Senior Frontend Engineer",
-                            company: "Vercel",
-                            description: "Leading frontend architecture for developer tools and AI-powered features.",
-                            tech: ["React", "TypeScript", "Next.js"],
-                        },
-                        {
-                            year: "2022",
-                            role: "Frontend Engineer",
-                            company: "Linear",
-                            description: "Built performant interfaces for project management and team collaboration.",
-                            tech: ["React", "GraphQL", "Framer Motion"],
-                        },
-                        {
-                            year: "2021",
-                            role: "Full Stack Developer",
-                            company: "Stripe",
-                            description: "Developed payment infrastructure and merchant-facing dashboard features.",
-                            tech: ["Ruby", "React", "PostgreSQL"],
-                        },
-                        {
-                            year: "2019",
-                            role: "Software Engineer",
-                            company: "Airbnb",
-                            description: "Created booking flow optimizations and host management tools.",
-                            tech: ["React", "Node.js", "MySQL"],
-                        },
-                    ].map((job, index) => (
-                        <div
-                            key={index}
-                            className="group grid lg:grid-cols-12 gap-4 sm:gap-8 py-6 sm:py-8 border-b border-border/50 hover:border-border transition-colors duration-500"
-                        >
-                            <div className="lg:col-span-2">
-                                <div className="text-xl sm:text-2xl font-light text-muted-foreground group-hover:text-foreground transition-colors duration-500">
-                                    {job.year}
+                <div className="relative max-w-4xl">
+                    {/* Timeline line - highlighted */}
+                    <div className="absolute left-0 top-2 bottom-0 w-0.5 bg-gradient-to-b from-foreground/40 via-foreground/20 to-transparent hidden sm:block"></div>
+
+                    <div className="space-y-0">
+                        {jobs.map((job, index) => (
+                            <div
+                                key={index}
+                                className="relative sm:ml-12 opacity-0 translate-y-8 animate-[fadeInUp_0.6s_ease-out_forwards]"
+                                style={{ animationDelay: `${index * 0.2}s` }}
+                            >
+                                {/* Timeline dot - vertically centered with job title */}
+                                <div className="absolute -left-[3.25rem] top-[2.75rem] w-2.5 h-2.5 bg-foreground rounded-full hidden sm:block ring-4 ring-background"></div>
+
+                                {/* Job card */}
+                                <div className="p-6 sm:p-8 border-b border-border/20 last:border-b-0">
+                                    <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4 mb-5">
+                                        <div>
+                                            <h3 className="text-xl sm:text-2xl font-medium tracking-tight">
+                                                {job.role}
+                                            </h3>
+                                            <div className="text-muted-foreground/80 text-sm mt-1">{job.company}</div>
+                                        </div>
+                                        <div className="text-xs text-muted-foreground/60 font-mono tracking-wider uppercase">
+                                            {job.period}
+                                        </div>
+                                    </div>
+
+                                    <ul className="space-y-2.5 mb-6">
+                                        {job.points.map((point, i) => (
+                                            <li key={i} className="text-muted-foreground text-sm leading-relaxed pl-5 relative before:content-[''] before:absolute before:left-0 before:top-1/2 before:-translate-y-1/2 before:w-1.5 before:h-1.5 before:bg-muted-foreground/40 before:rounded-full">
+                                                {point}
+                                            </li>
+                                        ))}
+                                    </ul>
+
+                                    {job.tech.length > 0 && (
+                                        <div className="flex flex-wrap gap-2 mt-4">
+                                            {job.tech.map((tech) => (
+                                                <span
+                                                    key={tech}
+                                                    className="px-3 py-1.5 text-xs text-foreground/80 rounded-full bg-muted/30 border border-border/40 hover:bg-muted/50 hover:text-foreground transition-all duration-300"
+                                                >
+                                                    {tech}
+                                                </span>
+                                            ))}
+                                        </div>
+                                    )}
                                 </div>
                             </div>
-
-                            <div className="lg:col-span-6 space-y-3">
-                                <div>
-                                    <h3 className="text-lg sm:text-xl font-medium">{job.role}</h3>
-                                    <div className="text-muted-foreground">{job.company}</div>
-                                </div>
-                                <p className="text-muted-foreground leading-relaxed max-w-lg">{job.description}</p>
-                            </div>
-
-                            <div className="lg:col-span-4 flex flex-wrap gap-2 lg:justify-end mt-2 lg:mt-0">
-                                {job.tech.map((tech) => (
-                                    <span
-                                        key={tech}
-                                        className="px-2 py-1 text-xs text-muted-foreground rounded group-hover:border-muted-foreground/50 transition-colors duration-500"
-                                    >
-                                        {tech}
-                                    </span>
-                                ))}
-                            </div>
-                        </div>
-                    ))}
+                        ))}
+                    </div>
                 </div>
             </div>
         </section>
