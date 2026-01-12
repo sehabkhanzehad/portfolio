@@ -190,7 +190,7 @@ const Projects = forwardRef<HTMLElement>((props, ref) => {
                             style={{ animationDelay: `${index * 0.1}s` }}
                         >
                             <div className="group relative">
-                                <div className="relative p-8 sm:p-10 rounded-2xl bg-muted/5 hover:bg-muted/10 transition-all duration-300 shadow-sm hover:shadow-md">
+                                <div className="relative p-8 sm:p-10 border border-border/10 hover:border-border/20 transition-all duration-300">
                                     <div className="space-y-4">
                                         {/* Header */}
                                         <div className="space-y-2">
@@ -265,7 +265,7 @@ const Projects = forwardRef<HTMLElement>((props, ref) => {
                                                 {project.skills.map((skill, skillIndex) => (
                                                     <span
                                                         key={skill}
-                                                        className="px-3 py-1.5 text-xs font-light text-muted-foreground/80 bg-muted/20 hover:bg-muted/40 hover:scale-105 rounded-md transition-all duration-300 cursor-default"
+                                                        className="px-3 py-1.5 text-xs text-foreground/80 rounded-full bg-muted/30 border border-border/40 hover:bg-muted/50 hover:text-foreground hover:scale-105 transition-all duration-300 cursor-default"
                                                         style={{
                                                             animationDelay: `${index * 0.1 + skillIndex * 0.02}s`,
                                                             opacity: 0,

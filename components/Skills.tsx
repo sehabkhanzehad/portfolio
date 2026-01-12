@@ -103,7 +103,7 @@ const Skills = forwardRef<HTMLElement>((props, ref) => {
                                             {category.skills.map((skill, skillIndex) => (
                                                 <span
                                                     key={skill}
-                                                    className="px-3 py-1.5 text-xs font-medium text-muted-foreground/90 bg-gradient-to-r from-background to-muted/20 backdrop-blur-sm rounded-full border border-border/30 hover:bg-muted/30 hover:text-foreground hover:border-border/50 hover:scale-105 transition-all duration-300 cursor-default shadow-sm"
+                                                    className="px-3 py-1.5 text-xs text-foreground/80 rounded-full bg-muted/30 border border-border/40 hover:bg-muted/50 hover:text-foreground hover:scale-105 transition-all duration-300 cursor-default"
                                                     style={{
                                                         animationDelay: `${index * 0.1 + skillIndex * 0.03}s`,
                                                         opacity: 0,

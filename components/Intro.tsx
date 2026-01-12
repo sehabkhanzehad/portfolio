@@ -118,7 +118,7 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
                                 {intro.focusSkills.map((skill, index) => (
                                     <span
                                         key={skill}
-                                        className="px-3.5 py-1.5 text-xs border border-border/40 rounded-full hover:border-foreground/30 hover:bg-foreground/[0.02] hover:scale-105 hover:-translate-y-0.5 transition-all duration-300 cursor-default backdrop-blur-sm opacity-0 animate-[fadeIn_0.4s_ease-out_forwards]"
+                                        className="px-3 py-1.5 text-xs text-foreground/80 rounded-full bg-muted/30 border border-border/40 hover:bg-muted/50 hover:text-foreground hover:scale-105 transition-all duration-300 cursor-default opacity-0 animate-[fadeIn_0.4s_ease-out_forwards]"
                                         style={{ animationDelay: `${1.3 + index * 0.04}s` }}
                                     >
                                         {skill}
