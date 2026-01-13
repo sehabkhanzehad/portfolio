@@ -37,7 +37,7 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground relative" suppressHydrationWarning>
       <Nav activeSection={activeSection} />
 
-      <main className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-16">
+      <main className="max-w-4xl mx-auto px-6 sm:px-8 lg:px-16 pb-24 lg:pb-0">
         <Intro ref={(el) => { sectionsRef.current[0] = el }} />
         <Work ref={(el) => { sectionsRef.current[1] = el }} />
         <Skills ref={(el) => { sectionsRef.current[2] = el }} />
