@@ -20,7 +20,7 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
         <header
             id="intro"
             ref={ref}
-            className="min-h-screen flex items-center opacity-0 relative overflow-hidden"
+            className="min-h-screen flex lg:items-center items-start opacity-0 relative overflow-hidden"
         >
             {/* Animated gradient orbs */}
             <div className="absolute -top-40 -right-40 w-96 h-96 bg-linear-to-br from-foreground/3 to-transparent rounded-full blur-3xl animate-pulse"
