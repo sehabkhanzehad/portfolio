@@ -88,7 +88,7 @@ const Skills = forwardRef<HTMLElement>((props, ref) => {
                         >
                             <div className="group relative">
                                 {/* Subtle background gradient */}
-                                <div className="absolute inset-0 bg-gradient-to-br from-muted/[0.02] to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
+                                <div className="absolute inset-0 bg-linear-to-br from-muted/2 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"></div>
 
                                 <div className="relative p-6 rounded-2xl border border-border/20 hover:border-border/40 transition-all duration-300">
                                     <div className="space-y-4">
@@ -126,8 +126,8 @@ const Skills = forwardRef<HTMLElement>((props, ref) => {
                     className="opacity-0 translate-y-4 animate-[fadeInUp_0.5s_ease-out_forwards]"
                     style={{ animationDelay: '0.6s' }}
                 >
-                    <div className="relative overflow-hidden p-8 rounded-2xl border border-border/20 bg-gradient-to-br from-muted/[0.05] via-muted/[0.02] to-transparent">
-                        <div className="absolute inset-0 bg-gradient-to-br from-foreground/[0.01] to-transparent"></div>
+                    <div className="relative overflow-hidden p-8 rounded-2xl border border-border/20 bg-linear-to-br from-muted/5 via-muted/2 to-transparent">
+                        <div className="absolute inset-0 bg-linear-to-br from-foreground/1 to-transparent"></div>
                         <div className="relative space-y-3">
                             <div className="flex items-center gap-2">
                                 <div className="w-2 h-2 bg-foreground/30 rounded-full"></div>
