@@ -6,21 +6,21 @@ const Education = forwardRef<HTMLElement>((props, ref) => {
     const education = [
         {
             degree: "BSc in CSE (Evening Program)",
-            institution: "Bangladesh University of Business & Technology – (BUBT)",
+            institution: "Bangladesh University of Business & Technology - (BUBT)",
             period: "2024 — Present",
             location: "Dhaka, Bangladesh",
             details: "For Working Professionals"
         },
         {
             degree: "Diploma Engineering in Computer",
-            institution: "Chapainawabganj Polytechnic Institute – (CNPI)",
+            institution: "Chapainawabganj Polytechnic Institute - (CNPI)",
             period: "2019 — 2023",
             location: "Chapainawabganj, Bangladesh",
             details: ""
         },
         {
             degree: "SSC in Science",
-            institution: "Nayagola High School – (NHS)",
+            institution: "Nayagola High School - (NHS)",
             period: "2019",
             location: "Chapainawabganj, Bangladesh",
             details: ""
@@ -38,7 +38,7 @@ const Education = forwardRef<HTMLElement>((props, ref) => {
 
                 <div className="relative max-w-4xl">
                     {/* Vertical line with luxury gradient */}
-                    <div className="absolute left-0 top-2 bottom-0 w-[1px] bg-linear-to-b from-foreground/40 via-foreground/20 to-transparent hidden sm:block"></div>
+                    <div className="absolute left-0 top-2 bottom-0 w-px bg-linear-to-b from-foreground/40 via-foreground/20 to-transparent hidden sm:block"></div>
 
                     <div className="space-y-12">
                         {education.map((item, index) => (
