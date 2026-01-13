@@ -40,13 +40,13 @@ const Connect = forwardRef<HTMLElement>((props, ref) => {
                 <div className="opacity-0 translate-y-6 animate-[fadeInUp_0.5s_ease-out_0.1s_forwards]">
                     <div className="space-y-3">
                         <div className="flex items-center gap-3">
-                            <div className="h-px w-8 bg-gradient-to-r from-foreground/40 to-transparent" />
+                            <div className="h-px w-8 bg-linear-to-r from-foreground/40 to-transparent" />
                             <span className="text-[10px] font-mono tracking-[0.2em] text-muted-foreground/60 uppercase">Connect</span>
                         </div>
 
                         <h2 className="text-3xl sm:text-4xl font-light tracking-tight">
                             Let's Create{" "}
-                            <span className="bg-gradient-to-r from-foreground via-foreground/80 to-foreground/60 bg-clip-text text-transparent">
+                            <span className="bg-linear-to-r from-foreground via-foreground/80 to-foreground/60 bg-clip-text text-transparent">
                                 Together
                             </span>
                         </h2>
@@ -82,7 +82,7 @@ const Connect = forwardRef<HTMLElement>((props, ref) => {
                                 className="group relative w-11 h-11 rounded-full border border-border/40 bg-card/30 hover:border-foreground/30 hover:bg-card/50 flex items-center justify-center transition-all duration-300 hover:scale-110 opacity-0 animate-[fadeIn_0.4s_ease-out_forwards]"
                                 style={{ animationDelay: `${0.7 + index * 0.05}s` }}
                             >
-                                <social.Icon className="w-[18px] h-[18px] opacity-60 group-hover:opacity-100 transition-opacity" />
+                                <social.Icon className="w-4.5 h-4.5 opacity-60 group-hover:opacity-100 transition-opacity" />
                             </Link>
                         ))}
                     </div>
