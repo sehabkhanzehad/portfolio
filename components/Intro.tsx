@@ -77,7 +77,7 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
                 </div>
 
                 {/* Right Column */}
-                <div className="lg:col-span-2 flex flex-col justify-center space-y-10 sm:space-y-12 mt-8 lg:mt-0">
+                <div className="lg:col-span-2 flex flex-col sm:justify-start justify-center space-y-10 sm:space-y-12 mt-8 lg:mt-0">
                     {/* Currently Working */}
                     <div className="opacity-0 translate-y-6 animate-[fadeInUp_0.6s_cubic-bezier(0.16,1,0.3,1)_0.9s_forwards]">
                         <div className="group relative">
