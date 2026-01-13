@@ -6,6 +6,7 @@ import Intro from "../components/Intro"
 import Work from "../components/Work"
 import Skills from "../components/Skills"
 import Projects from "../components/Projects"
+import Education from "../components/Education"
 import Connect from "../components/Connect"
 import Footer from "../components/Footer"
 
@@ -42,9 +43,11 @@ export default function Home() {
         <Work ref={(el) => { sectionsRef.current[1] = el }} />
         <Skills ref={(el) => { sectionsRef.current[2] = el }} />
         <Projects ref={(el) => { sectionsRef.current[3] = el }} />
-        <Connect ref={(el) => { sectionsRef.current[4] = el }} />
+        <Education ref={(el) => { sectionsRef.current[4] = el }} />
+        <Connect ref={(el) => { sectionsRef.current[5] = el }} />
         <Footer />
       </main>
+
 
       <div className="fixed bottom-0 left-0 right-0 h-24 bg-linear-to-t from-background via-background/80 to-transparent pointer-events-none"></div>
     </div>
