@@ -109,7 +109,10 @@ const Skills = forwardRef<HTMLElement>((props, ref) => {
                                                     style={{
                                                         animationDelay: `${index * 0.1 + skillIndex * 0.03}s`,
                                                         opacity: 0,
-                                                        animation: 'fadeInUp 0.4s ease-out forwards'
+                                                        animationName: 'fadeInUp',
+                                                        animationDuration: '0.4s',
+                                                        animationTimingFunction: 'ease-out',
+                                                        animationFillMode: 'forwards'
                                                     }}
                                                 >
                                                     {skill}
