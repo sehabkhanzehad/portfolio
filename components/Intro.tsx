@@ -23,9 +23,9 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
             className="min-h-screen flex items-center opacity-0 relative overflow-hidden"
         >
             {/* Animated gradient orbs */}
-            <div className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-foreground/[0.03] to-transparent rounded-full blur-3xl animate-pulse"
+            <div className="absolute -top-40 -right-40 w-96 h-96 bg-linear-to-br from-foreground/3 to-transparent rounded-full blur-3xl animate-pulse"
                 style={{ animationDuration: '4s' }}></div>
-            <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-foreground/[0.02] to-transparent rounded-full blur-3xl animate-pulse"
+            <div className="absolute -bottom-40 -left-40 w-96 h-96 bg-linear-to-tr from-foreground/2 to-transparent rounded-full blur-3xl animate-pulse"
                 style={{ animationDuration: '6s', animationDelay: '1s' }}></div>
 
             <div className="grid lg:grid-cols-5 gap-16 sm:gap-20 w-full relative z-10">
@@ -34,7 +34,7 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
                     <div className="opacity-0 translate-y-4 animate-[fadeInUp_0.5s_ease-out_0.1s_forwards]">
                         <div className="flex items-baseline gap-3">
                             <span className="text-sm sm:text-base text-muted-foreground/70 font-light tracking-wide">Hi there, I'm</span>
-                            <div className="h-px w-8 bg-gradient-to-r from-muted-foreground/30 to-transparent self-center"></div>
+                            <div className="h-px w-8 bg-linear-to-r from-muted-foreground/30 to-transparent self-center"></div>
                         </div>
                     </div>
 
@@ -44,7 +44,7 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
                             {intro.firstName}
                         </h1>
                         <h1 className="text-6xl sm:text-7xl lg:text-8xl font-light tracking-tight opacity-0 translate-y-6 animate-[fadeInUp_0.6s_ease-out_0.5s_forwards]">
-                            <span className="bg-gradient-to-r from-foreground via-foreground/80 to-foreground/60 bg-clip-text text-transparent">
+                            <span className="bg-linear-to-r from-foreground via-foreground/80 to-foreground/60 bg-clip-text text-transparent">
                                 {intro.lastName}
                             </span>
                         </h1>
@@ -52,7 +52,7 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
 
                     {/* Description */}
                     <div className="space-y-6 max-w-xl opacity-0 translate-y-6 animate-[fadeInUp_0.6s_ease-out_0.7s_forwards]">
-                        <div className="h-px w-16 bg-gradient-to-r from-foreground/40 to-transparent"></div>
+                        <div className="h-px w-16 bg-linear-to-r from-foreground/40 to-transparent"></div>
                         <p className="text-lg sm:text-xl text-muted-foreground/90 leading-relaxed font-light">
                             {intro.description}
                         </p>
@@ -82,10 +82,10 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
                     {/* Currently Working */}
                     <div className="opacity-0 translate-y-6 animate-[fadeInUp_0.6s_ease-out_0.9s_forwards]">
                         <div className="group relative">
-                            <div className="absolute -inset-4 bg-gradient-to-r from-foreground/[0.03] to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
+                            <div className="absolute -inset-4 bg-linear-to-r from-foreground/3 to-transparent rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 blur-xl"></div>
                             <div className="relative space-y-5">
                                 <div className="flex items-center gap-2">
-                                    <div className="h-px flex-1 bg-gradient-to-r from-border/60 to-transparent"></div>
+                                    <div className="h-px flex-1 bg-linear-to-r from-border/60 to-transparent"></div>
                                     <span className="text-[10px] font-mono tracking-[0.2em] text-muted-foreground/60 uppercase">Currently</span>
                                 </div>
                                 <div className="space-y-3">
@@ -111,7 +111,7 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
                     <div className="opacity-0 translate-y-6 animate-[fadeInUp_0.6s_ease-out_1.1s_forwards]">
                         <div className="space-y-5">
                             <div className="flex items-center gap-2">
-                                <div className="h-px flex-1 bg-gradient-to-r from-border/60 to-transparent"></div>
+                                <div className="h-px flex-1 bg-linear-to-r from-border/60 to-transparent"></div>
                                 <span className="text-[10px] font-mono tracking-[0.2em] text-muted-foreground/60 uppercase">Focus</span>
                             </div>
                             <div className="flex flex-wrap gap-2">
