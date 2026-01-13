@@ -5,42 +5,37 @@ import { forwardRef } from "react"
 const Projects = forwardRef<HTMLElement>((props, ref) => {
     const projects = [
         {
-            name: "LancePilot",
+            name: "Lancepilot",
             type: "office",
             company: "Lancepilot Ltd.",
             url: "https://lancepilot.com",
             role: [
-                "Lead Backend Developer (Handled SaaS architecture, API integration, and Stripe billing)",
+                "Developed secure RESTful APIs features.",
+                "Develop user billing management with stripe SDK.",
+                "Handled SaaS architecture, Third party API integrations.",
                 "Implemented RBAC and multi-workspace architecture",
                 "Coordinated with frontend and QA team"
             ],
             description: "World's first Meta-compliant WhatsApp cold outreach tool with 97% open rate. A comprehensive SaaS platform for WhatsApp marketing automation, campaign management, and analytics.",
-            features: [
-                "White-label solution with custom branding",
-                "Multi-workspace architecture for agencies",
-                "Real-time campaign analytics and reporting",
-                "WhatsApp Business API integration",
-                "Role-based access control for teams",
-                "Client workspace management"
-            ],
             skills: [
                 "Laravel",
                 "REST API",
+                "React",
+                "InertiaJs",
+                "Tailwind CSS",
                 "SaaS Architecture",
                 "Multitenancy",
                 "RBAC",
-                "Stripe Billing",
+                "Stripe",
                 "PostgreSQL",
                 "Redis",
                 "AWS",
                 "Laravel Cloud",
-                "Blade",
-                "Tailwind CSS"
             ]
         },
         {
-            name: "MS Raj Travels Accounts Management System",
-            type: "office",
+            name: "Pilgrim & Accounts Management System (Frontend)",
+            type: "personal",
             company: "MS Raj Travels",
             url: "https://accounts.msrajtravels.com",
             role: [
@@ -49,18 +44,11 @@ const Projects = forwardRef<HTMLElement>((props, ref) => {
                 "Deployed and maintained the production application"
             ],
             description: "A modern, responsive web application for managing financial operations, including bank accounts, bills, borrowings, employee data, and analytics dashboards for a pilgrimage travel agency, streamlining administrative workflows and providing real-time insights.",
-            features: [
-                "Multi-language support (English and Bengali) with internationalization",
-                "Dark/light theme toggle for enhanced user experience",
-                "Comprehensive analytics with interactive charts (line and pie charts)",
-                "CRUD operations for banks, bills, borrowings, and employees",
-                "Secure user authentication and role-based access",
-                "Responsive dashboard layout with sidebar navigation"
-            ],
             skills: [
                 "React 19",
                 "Vite",
                 "Tailwind CSS",
+                "Shadcn UI",
                 "Radix UI",
                 "TanStack React Query",
                 "Axios",
@@ -72,8 +60,8 @@ const Projects = forwardRef<HTMLElement>((props, ref) => {
             ]
         },
         {
-            name: "MS Raj Travels API Backend",
-            type: "office",
+            name: "Pilgrim & Accounts Management System (Backend)",
+            type: "personal",
             company: "MS Raj Travels",
             url: "https://api.msrajtravels.com",
             role: [
@@ -82,22 +70,14 @@ const Projects = forwardRef<HTMLElement>((props, ref) => {
                 "Ensured API security, scalability, and production deployment"
             ],
             description: "A robust REST API developed to power the operational backend of a pilgrimage travel service, handling pilgrim registrations, package management, financial transactions, and analytics, ensuring secure and efficient data processing for Hajj and Umrah services.",
-            features: [
-                "Secure API authentication with token-based access",
-                "Comprehensive analytics endpoints for dashboard metrics and reporting",
-                "Full CRUD for pilgrims, packages, transactions, and user profiles",
-                "Modular routing for pre-registrations, registrations, and group leaders",
-                "Health check monitoring and database connectivity validation",
-                "Support for multiple operational years and sections"
-            ],
             skills: [
                 "Laravel 12",
                 "PHP 8.2",
                 "Laravel Sanctum",
                 "Laravel Telescope",
-                "Pest",
                 "Composer",
-                "MySQL"
+                "MySQL",
+                "REST API",
             ]
         },
         // {
@@ -241,23 +221,6 @@ const Projects = forwardRef<HTMLElement>((props, ref) => {
                                                 ))}
                                             </ul>
                                         </div>
-
-                                        {/* Key Features - Compact Grid */}
-                                        {/* <div className="space-y-3">
-                                            <h4 className="text-xs font-semibold text-foreground/70 uppercase tracking-wider">
-                                                Key Features
-                                            </h4>
-                                            <ul className="grid sm:grid-cols-2 gap-x-6 gap-y-2">
-                                                {project.features.map((feature, i) => (
-                                                    <li
-                                                        key={i}
-                                                        className="text-xs text-muted-foreground/70 leading-relaxed pl-4 relative before:content-[''] before:absolute before:left-0 before:top-[0.55rem] before:w-1 before:h-1 before:bg-muted-foreground/40 before:rounded-full"
-                                                    >
-                                                        {feature}
-                                                    </li>
-                                                ))}
-                                            </ul>
-                                        </div> */}
 
                                         {/* Tech Stack - Minimal */}
                                         <div className="space-y-3 pt-2">
