@@ -122,13 +122,13 @@
 
 @layer utilities {
   .animate-fade-in-up {
-    animation: fade-in-up 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: fade-in-up 0.45s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 
   @keyframes fade-in-up {
     from {
       opacity: 0;
-      transform: translateY(24px);
+      transform: translateY(12px);
     }
     to {
       opacity: 1;
@@ -139,7 +139,7 @@
   @keyframes fadeInUp {
     from {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(12px);
     }
     to {
       opacity: 1;

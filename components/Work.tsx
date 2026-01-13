@@ -59,7 +59,7 @@ const Work = forwardRef<HTMLElement>((props, ref) => {
         <section
             id="work"
             ref={ref}
-            className="min-h-screen py-8 sm:py-12 opacity-0"
+            className="min-h-screen py-8 sm:py-12"
         >
             <div className="space-y-8">
                 <h2 className="text-3xl sm:text-4xl font-light">Experience</h2>
@@ -72,8 +72,8 @@ const Work = forwardRef<HTMLElement>((props, ref) => {
                         {jobs.map((job, index) => (
                             <div
                                 key={index}
-                                className="relative sm:ml-12 opacity-0 translate-y-6 animate-[fadeInUp_0.5s_ease-out_forwards]"
-                                style={{ animationDelay: `${index * 0.15}s` }}
+                                className="relative sm:ml-12 translate-y-3 animate-[fadeInUp_0.35s_ease-out_forwards]"
+                                style={{ animationDelay: `${index * 0.08}s` }}
                             >
                                 {/* Timeline dot - vertically centered with job title */}
                                 <div className="absolute -left-[3.25rem] top-[2.75rem] w-2.5 h-2.5 bg-foreground rounded-full hidden sm:block ring-4 ring-background"></div>
@@ -118,8 +118,8 @@ const Work = forwardRef<HTMLElement>((props, ref) => {
                                             {job.tech.map((tech, techIndex) => (
                                                 <span
                                                     key={tech}
-                                                    className="px-3 py-1.5 text-xs text-foreground/80 rounded-full bg-muted/30 border border-border/40 hover:bg-muted/50 hover:text-foreground hover:scale-105 transition-all duration-300 opacity-0 animate-[fadeIn_0.4s_ease-out_forwards]"
-                                                    style={{ animationDelay: `${index * 0.15 + techIndex * 0.03}s` }}
+                                                    className="px-3 py-1.5 text-xs text-foreground/80 rounded-full bg-muted/30 border border-border/40 hover:bg-muted/50 hover:text-foreground hover:scale-105 transition-all duration-200 animate-[fadeIn_0.3s_ease-out_forwards]"
+                                                    style={{ animationDelay: `${index * 0.08 + techIndex * 0.02}s` }}
                                                 >
                                                     {tech}
                                                 </span>
