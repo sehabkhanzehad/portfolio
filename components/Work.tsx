@@ -66,7 +66,7 @@ const Work = forwardRef<HTMLElement>((props, ref) => {
 
                 <div className="relative max-w-4xl">
                     {/* Timeline line - highlighted */}
-                    <div className="absolute left-0 top-2 bottom-0 w-0.5 bg-gradient-to-b from-foreground/40 via-foreground/20 to-transparent hidden sm:block"></div>
+                    <div className="absolute left-0 top-2 bottom-0 w-0.5 bg-linear-to-b from-foreground/40 via-foreground/20 to-transparent hidden sm:block"></div>
 
                     <div className="space-y-0">
                         {jobs.map((job, index) => (
@@ -76,8 +76,7 @@ const Work = forwardRef<HTMLElement>((props, ref) => {
                                 style={{ animationDelay: `${index * 0.08}s` }}
                             >
                                 {/* Timeline dot - vertically centered with job title */}
-                                <div className="absolute -left-[3.25rem] top-[2.75rem] w-2.5 h-2.5 bg-foreground rounded-full hidden sm:block ring-4 ring-background"></div>
-
+                                <div className="absolute -left-13 top-11 w-2.5 h-2.5 bg-foreground rounded-full hidden sm:block ring-4 ring-background"></div>
                                 {/* Job card */}
                                 <div className="p-6 sm:p-8 border-b border-border/20 last:border-b-0">
                                     <div className="flex flex-col sm:flex-row sm:justify-between sm:items-start gap-2 sm:gap-4 mb-5">
