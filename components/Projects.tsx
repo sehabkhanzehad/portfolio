@@ -170,7 +170,7 @@ const Projects = forwardRef<HTMLElement>((props, ref) => {
                     {projects.map((project, index) => (
                         <div
                             key={project.name}
-                            className="opacity-0 translate-y-6 animate-[fadeInUp_0.5s_ease-out_forwards]"
+                            className="opacity-0 translate-y-6 animate-[fadeInUp_0.5s_cubic-bezier(0.16,1,0.3,1)_forwards]"
                             style={{ animationDelay: `${index * 0.1}s` }}
                         >
                             <div className="group relative">

@@ -72,7 +72,7 @@ const Work = forwardRef<HTMLElement>((props, ref) => {
                         {jobs.map((job, index) => (
                             <div
                                 key={index}
-                                className="relative sm:ml-12 translate-y-3 animate-[fadeInUp_0.35s_ease-out_forwards]"
+                                className="relative sm:ml-12 translate-y-3 animate-[fadeInUp_0.35s_cubic-bezier(0.16,1,0.3,1)_forwards]"
                                 style={{ animationDelay: `${index * 0.08}s` }}
                             >
                                 {/* Timeline dot - vertically centered with job title */}
@@ -117,7 +117,7 @@ const Work = forwardRef<HTMLElement>((props, ref) => {
                                             {job.tech.map((tech, techIndex) => (
                                                 <span
                                                     key={tech}
-                                                    className="px-3 py-1.5 text-xs text-foreground/80 rounded-full bg-muted/30 border border-border/40 hover:bg-muted/50 hover:text-foreground hover:scale-105 transition-all duration-200 animate-[fadeIn_0.3s_ease-out_forwards]"
+                                                    className="px-3 py-1.5 text-xs text-foreground/80 rounded-full bg-muted/30 border border-border/40 hover:bg-muted/50 hover:text-foreground hover:scale-105 transition-all duration-200 animate-[fadeIn_0.3s_cubic-bezier(0.16,1,0.3,1)_forwards]"
                                                     style={{ animationDelay: `${index * 0.08 + techIndex * 0.02}s` }}
                                                 >
                                                     {tech}

@@ -37,7 +37,7 @@ const Connect = forwardRef<HTMLElement>((props, ref) => {
         <section id="connect" ref={ref} className="py-12 sm:py-16 opacity-0">
             <div className="space-y-8 sm:space-y-10">
                 {/* Header */}
-                <div className="opacity-0 translate-y-6 animate-[fadeInUp_0.5s_ease-out_0.1s_forwards]">
+                <div className="opacity-0 translate-y-6 animate-[fadeInUp_0.5s_cubic-bezier(0.16,1,0.3,1)_0.1s_forwards]">
                     <div className="space-y-3">
                         <div className="flex items-center gap-3">
                             <div className="h-px w-8 bg-linear-to-r from-foreground/40 to-transparent" />
@@ -54,7 +54,7 @@ const Connect = forwardRef<HTMLElement>((props, ref) => {
                 </div>
 
                 {/* Email Section */}
-                <div className="opacity-0 translate-y-6 animate-[fadeInUp_0.5s_ease-out_0.3s_forwards]">
+                <div className="opacity-0 translate-y-6 animate-[fadeInUp_0.5s_cubic-bezier(0.16,1,0.3,1)_0.3s_forwards]">
                     <a
                         href="mailto:sehabkhanzehad@gmail.com"
                         className="flex items-center gap-4 text-foreground hover:text-foreground/80 transition-colors"
@@ -65,7 +65,7 @@ const Connect = forwardRef<HTMLElement>((props, ref) => {
                 </div>
 
                 {/* Social Links */}
-                <div className="space-y-5 opacity-0 translate-y-6 animate-[fadeInUp_0.5s_ease-out_0.5s_forwards]">
+                <div className="space-y-5 opacity-0 translate-y-6 animate-[fadeInUp_0.5s_cubic-bezier(0.16,1,0.3,1)_0.5s_forwards]">
                     <div className="flex items-center gap-3 justify-center sm:justify-start">
                         <span className="text-[10px] font-mono tracking-[0.2em] text-muted-foreground/60 uppercase">Elsewhere</span>
                     </div>
@@ -79,7 +79,7 @@ const Connect = forwardRef<HTMLElement>((props, ref) => {
                                 rel="noopener noreferrer"
                                 aria-label={social.name}
                                 title={social.name}
-                                className="group relative w-11 h-11 rounded-full border border-border/40 bg-card/30 hover:border-foreground/30 hover:bg-card/50 flex items-center justify-center transition-all duration-300 hover:scale-110 opacity-0 animate-[fadeIn_0.4s_ease-out_forwards]"
+                                className="group relative w-11 h-11 rounded-full border border-border/40 bg-card/30 hover:border-foreground/30 hover:bg-card/50 flex items-center justify-center transition-all duration-300 hover:scale-110 opacity-0 animate-[fadeIn_0.4s_cubic-bezier(0.16,1,0.3,1)_forwards]"
                                 style={{ animationDelay: `${0.7 + index * 0.05}s` }}
                             >
                                 <social.Icon className="w-4.5 h-4.5 opacity-60 group-hover:opacity-100 transition-opacity" />

@@ -85,7 +85,7 @@ const Skills = forwardRef<HTMLElement>((props, ref) => {
                     {skillCategories.map((category, index) => (
                         <div
                             key={category.title}
-                            className="opacity-0 translate-y-6 animate-[fadeInUp_0.5s_ease-out_forwards]"
+                            className="opacity-0 translate-y-6 animate-[fadeInUp_0.5s_cubic-bezier(0.16,1,0.3,1)_forwards]"
                             style={{ animationDelay: `${index * 0.1}s` }}
                         >
                             <div className="group relative">
@@ -111,7 +111,7 @@ const Skills = forwardRef<HTMLElement>((props, ref) => {
                                                         opacity: 0,
                                                         animationName: 'fadeInUp',
                                                         animationDuration: '0.4s',
-                                                        animationTimingFunction: 'ease-out',
+                                                        animationTimingFunction: 'cubic-bezier(0.16,1,0.3,1)',
                                                         animationFillMode: 'forwards'
                                                     }}
                                                 >
@@ -128,7 +128,7 @@ const Skills = forwardRef<HTMLElement>((props, ref) => {
 
                 {/* Professional Summary */}
                 <div
-                    className="opacity-0 translate-y-4 animate-[fadeInUp_0.5s_ease-out_forwards]"
+                    className="opacity-0 translate-y-4 animate-[fadeInUp_0.5s_cubic-bezier(0.16,1,0.3,1)_forwards]"
                     style={{ animationDelay: '0.6s' }}
                 >
                     <div className="relative overflow-hidden p-8 rounded-2xl border border-border/20 bg-linear-to-br from-muted/5 via-muted/2 to-transparent">
