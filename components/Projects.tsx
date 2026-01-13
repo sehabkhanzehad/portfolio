@@ -166,7 +166,7 @@ const Projects = forwardRef<HTMLElement>((props, ref) => {
                 </div>
 
                 {/* Projects List */}
-                <div className="space-y-8">
+                <div className="space-y-12">
                     {projects.map((project, index) => (
                         <div
                             key={project.name}
@@ -174,7 +174,7 @@ const Projects = forwardRef<HTMLElement>((props, ref) => {
                             style={{ animationDelay: `${index * 0.1}s` }}
                         >
                             <div className="group relative">
-                                <div className="relative p-8 sm:p-10 rounded-2xl bg-muted/5 hover:bg-muted/10 transition-all duration-300 shadow-sm hover:shadow-md">
+                                <div className="relative transition-all duration-300">
                                     <div className="space-y-4">
                                         {/* Header */}
                                         <div className="space-y-2">
@@ -236,7 +236,7 @@ const Projects = forwardRef<HTMLElement>((props, ref) => {
                                                         style={{
                                                             animationDelay: `${index * 0.1 + skillIndex * 0.02}s`,
                                                             opacity: 0,
-                                                            animation: 'fadeInUp 0.4s ease-out forwards'
+                                                            animation: 'fadeInUp 0.4s cubic-bezier(0.16,1,0.3,1) forwards'
                                                         }}
                                                     >
                                                         {skill}
@@ -246,6 +246,9 @@ const Projects = forwardRef<HTMLElement>((props, ref) => {
                                         </div>
                                     </div>
                                 </div>
+                                {index < projects.length - 1 && (
+                                    <div className="mt-12 pt-12 border-t border-border/20"></div>
+                                )}
                             </div>
                         </div>
                     ))}
