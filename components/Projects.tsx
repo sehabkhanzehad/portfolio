@@ -14,6 +14,7 @@ const Projects = forwardRef<HTMLElement>((props, ref) => {
                 "Develop user billing management with stripe SDK.",
                 "Handled SaaS architecture, Third party API integrations.",
                 "Implemented RBAC and multi-workspace architecture",
+                "Designed monolithic architecture",
                 "Coordinated with frontend and QA team"
             ],
             description: "World's first Meta-compliant WhatsApp cold outreach tool with 97% open rate. A comprehensive SaaS platform for WhatsApp marketing automation, campaign management, and analytics.",
@@ -31,6 +32,7 @@ const Projects = forwardRef<HTMLElement>((props, ref) => {
                 "Redis",
                 "AWS",
                 "Laravel Cloud",
+                "Monolithic Architecture"
             ]
         },
         {
@@ -56,7 +58,8 @@ const Projects = forwardRef<HTMLElement>((props, ref) => {
                 "React Router DOM",
                 "React Hook Form",
                 "Zod",
-                "Lucide React"
+                "Lucide React",
+                "Microservices Architecture"
             ]
         },
         {
@@ -78,6 +81,7 @@ const Projects = forwardRef<HTMLElement>((props, ref) => {
                 "Composer",
                 "MySQL",
                 "REST API",
+                "Microservices Architecture"
             ]
         },
         // {

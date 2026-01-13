@@ -11,6 +11,8 @@ const Skills = forwardRef<HTMLElement>((props, ref) => {
                 "PHP",
                 "REST API",
                 "SaaS Architecture",
+                "Monolithic Architecture",
+                "Microservices Architecture",
                 "Multitenancy",
                 "RBAC",
                 "Stripe Billing",
