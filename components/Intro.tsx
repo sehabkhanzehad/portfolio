@@ -38,16 +38,16 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
                     </div>
 
                     {/* Name */}
-                    <div className="space-y-2">
-                        <h1 className="text-6xl sm:text-7xl lg:text-8xl font-light tracking-tight opacity-0 translate-y-6 animate-[fadeInUp_0.6s_cubic-bezier(0.16,1,0.3,1)_0.3s_forwards]">
+                    <h1 className="space-y-2">
+                        <span className="block text-6xl sm:text-7xl lg:text-8xl font-light tracking-tight opacity-0 translate-y-6 animate-[fadeInUp_0.6s_cubic-bezier(0.16,1,0.3,1)_0.3s_forwards]">
                             {intro.firstName}
-                        </h1>
-                        <h1 className="text-6xl sm:text-7xl lg:text-8xl font-light tracking-tight opacity-0 translate-y-6 animate-[fadeInUp_0.6s_cubic-bezier(0.16,1,0.3,1)_0.5s_forwards]">
+                        </span>
+                        <span className="block text-6xl sm:text-7xl lg:text-8xl font-light tracking-tight opacity-0 translate-y-6 animate-[fadeInUp_0.6s_cubic-bezier(0.16,1,0.3,1)_0.5s_forwards]">
                             <span className="bg-linear-to-r from-foreground via-foreground/80 to-foreground/60 bg-clip-text text-transparent">
                                 {intro.lastName}
                             </span>
-                        </h1>
-                    </div>
+                        </span>
+                    </h1>
 
                     {/* Description */}
                     <div className="space-y-6 max-w-xl opacity-0 translate-y-6 animate-[fadeInUp_0.6s_cubic-bezier(0.16,1,0.3,1)_0.7s_forwards]">
@@ -66,7 +66,7 @@ const Intro = forwardRef<HTMLElement>((props, ref) => {
                                 <span className="text-sm text-green-500/90 font-medium">Available for work</span>
                             </div>
                             <div className="flex items-center gap-2 text-sm text-muted-foreground">
-                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-label="Location" role="img">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                                 </svg>

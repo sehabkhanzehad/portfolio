@@ -10,10 +10,93 @@ const geist = Geist({
   variable: "--font-geist",
 })
 
-export const metadata: Metadata = {
+const siteConfig = {
+  name: "Sk Zehad",
   title: "Sk Zehad - Software Developer",
-  description: "Personal portfolio of Sk Zehad.",
-  generator: "next",
+  description: "Software Developer specializing in building scalable SaaS platforms with Laravel and React. Expert in multitenancy, RBAC, and cloud deployments.",
+  url: "https://zehad.me", // Replace with your actual domain if different
+  // ogImage: "/og-image.png", // Ensure this exists in public or use a default
+  keywords: [
+    "Sk Zehad",
+    "Software Developer",
+    "Laravel Developer",
+    "React Developer",
+    "SaaS Developer",
+    "Full Stack Developer",
+    "Bangladesh",
+    "Lancepilot",
+    "Web Development",
+    "PHP Developer"
+  ],
+  links: {
+    github: "https://github.com/sehabkhanzehad",
+    linkedin: "https://linkedin.com/in/sehabkhanzehad",
+    email: "sehabkhanzehad@gmail.com"
+  }
+}
+
+export const metadata: Metadata = {
+  title: {
+    default: siteConfig.title,
+    template: `%s | ${siteConfig.name}`,
+  },
+  description: siteConfig.description,
+  keywords: siteConfig.keywords,
+  authors: [
+    {
+      name: "Sk Zehad",
+      url: siteConfig.url,
+    },
+  ],
+  creator: "Sk Zehad",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteConfig.url,
+    title: siteConfig.title,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+    //     images: [
+    //       {
+    //         url: siteConfig.ogImage,
+    //         width: 1200,
+    //         height: 630,
+    //         alt: siteConfig.name,
+    //       },
+    //     ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteConfig.title,
+    description: siteConfig.description,
+    //     images: [siteConfig.ogImage],
+    creator: "@sehabkhanzehad", // If you have a twitter handle
+  },
+  //   icons: {
+  //     icon: "/favicon.ico",
+  //     shortcut: "/favicon-16x16.png",
+  //     apple: "/apple-touch-icon.png",
+  //   },
+  manifest: `${siteConfig.url}/site.webmanifest`,
+  metadataBase: new URL(siteConfig.url),
+  appleWebApp: {
+    capable: true,
+    statusBarStyle: "default",
+    title: siteConfig.name,
+  },
+  formatDetection: {
+    telephone: false,
+  },
+}
+
+export const viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: light)", color: "white" },
+    { media: "(prefers-color-scheme: dark)", color: "black" },
+  ],
+  width: "device-width",
+  initialScale: 1,
+  maximumScale: 1,
 }
 
 export default function RootLayout({
@@ -21,6 +104,31 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode
 }>) {
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": siteConfig.name,
+    "url": siteConfig.url,
+    "jobTitle": "Software Developer",
+    "description": siteConfig.description,
+    "image": `${siteConfig.url}/placeholder-user.jpg`,
+    "sameAs": [
+      siteConfig.links.github,
+      siteConfig.links.linkedin
+    ],
+    "knowsAbout": [
+      "Laravel",
+      "React",
+      "SaaS Architecture",
+      "Multitenancy",
+      "PHP",
+      "JavaScript",
+      "PostgreSQL",
+      "MySQL",
+      "REST API"
+    ]
+  }
+
   return (
     <html lang="en" className={`${geist.variable}`} suppressHydrationWarning>
       <body className="font-sans antialiased" suppressHydrationWarning>
@@ -30,6 +138,10 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          />
           {children}
         </ThemeProvider>
       </body>
