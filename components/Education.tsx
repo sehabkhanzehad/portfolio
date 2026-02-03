@@ -4,13 +4,13 @@ import { forwardRef } from "react"
 
 const Education = forwardRef<HTMLElement>((props, ref) => {
     const education = [
-        {
-            degree: "BSc in CSE (Evening Program)",
-            institution: "Bangladesh University of Business & Technology - (BUBT)",
-            period: "2024 — Present",
-            location: "Dhaka, Bangladesh",
-            details: "For Working Professionals"
-        },
+        // {
+        //     degree: "BSc in CSE (Evening Program)",
+        //     institution: "Bangladesh University of Business & Technology - (BUBT)",
+        //     period: "2024 — Present",
+        //     location: "Dhaka, Bangladesh",
+        //     details: "For Working Professionals"
+        // },
         {
             degree: "Diploma Engineering in Computer",
             institution: "Chapainawabganj Polytechnic Institute - (CNPI)",
